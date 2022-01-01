@@ -317,11 +317,15 @@ body.onload = () => {
                 speed: speedResult,
                 present: getPresent,
             };
-            if(newElement.speed > recordSpeed.speed) recordSpeed = newElement;
+            if(newElement.speed > recordSpeed.speed) {
+                recordSpeed = newElement;
+            }else if(newElement.speed === recordSpeed.speed && newElement.speed > recordSpeed.speed){
+                recordSpeed = newElement;
+            }
             localStorage.setItem("recordTypeSpeed", JSON.stringify(recordSpeed))
 
             resultData.forEach((item, index) => {
-                if(item.speed === newElement.speed){
+                if(item.speed === newElement.speed && item.present === recordSpeed.present){
                     resultData.splice(index, 1);
                 }
             })
