@@ -1,0 +1,318 @@
+* {
+  font-family: "Cousine", monospace;
+}
+
+.active {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.bgHind {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dangerBg {
+  background: #ff3838 !important;
+  color: #e0e0e0 !important;
+}
+
+.danger {
+  color: #ff3838 !important;
+}
+
+.green {
+  color: #05c46b !important;
+}
+
+.greenBg {
+  background: #05c46b !important;
+}
+
+.blue {
+  color: #0097e6 !important;
+}
+
+.blueBg {
+  background: #0097e6 !important;
+}
+
+.light {
+  color: #e0e0e0 !important;
+}
+
+.greenHover {
+  transition: all 0.3s;
+  color: #c8d6e5;
+}
+.greenHover:hover {
+  color: #05c46b;
+}
+
+.edit {
+  font-size: 24px;
+  color: #05c46b;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.edit:hover {
+  transform: scale(1.1);
+}
+
+#refresh {
+  cursor: pointer;
+}
+
+.user-info {
+  width: 100%;
+  max-width: 300px;
+  background: #1F1F2B;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  right: -300px;
+  min-height: 100vh;
+  transition: all 0.5s ease-in-out;
+  z-index: 99999;
+}
+.user-info .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #303041;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.user-info .img img {
+  object-fit: cover;
+}
+.user-info .times {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #05c46b;
+  cursor: pointer;
+}
+
+#main {
+  width: 100%;
+  min-height: 100vh;
+  background: #1F1F2B;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ovner {
+  color: #e0e0e0;
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  font-size: 12px;
+  margin-bottom: 0.5rem !important;
+}
+
+.starting-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.starting-box .play i {
+  font-size: 5rem;
+  color: #05c46b;
+  cursor: pointer;
+}
+
+.text-box {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100px;
+  background: #303041;
+  color: #fff;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 15px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.text-box #text {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.text-box #text .word {
+  padding: 3px;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.input-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+#input {
+  padding: 8px 20px;
+  color: #fff;
+  background: transparent;
+  margin: 0 auto;
+  border-radius: 15px;
+  transition: 0.5s;
+  font-size: 24px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+  padding: 8px 30px;
+  background: #303041;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.finish-result {
+  width: 400px;
+  padding: 10px 20px;
+  background: #303041;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 15px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.finish-result .info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+.finish-result .info span {
+  font-weight: bold;
+}
+.finish-result .date {
+  font-size: 12px;
+  font-weight: 500 !important;
+}
+.finish-result .mini {
+  font-size: 18px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #303041;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.modal form {
+  width: 100%;
+  background: transparent;
+  max-width: 600px;
+}
+.modal .input-block {
+  background: #303041;
+  display: flex;
+  color: #fff;
+  padding: 8px;
+  margin: 0 auto;
+  border-radius: 15px;
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.modal .save-box {
+  text-align: center;
+  border-radius: 50% !important;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #05c46b;
+  cursor: pointer;
+}
+.modal .save-box .save {
+  border: none;
+  outline: none;
+  background: none;
+  color: #e0e0e0;
+  font-weight: bold;
+  font-size: 24px;
+}
+.modal label {
+  color: #05c46b;
+}
+.modal input {
+  flex: 1;
+  background: none;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+/*refresh*/
+#refresh i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*Sign in*/
+.logIn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#user, #reload {
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+#reload {
+  font-size: 18px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.chooseWord {
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+.chooseWord.choose {
+  background: #303041;
+}
+.chooseWord:hover {
+  color: #10ac84 !important;
+}
+
+/*# sourceMappingURL=main.css.map */
