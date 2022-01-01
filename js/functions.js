@@ -1,4 +1,10 @@
 body.onload = () => {
+    window.addEventListener('keydown', () => {
+        if(event.keyCode === 13) {
+            event.preventDefault();
+            return false;
+          }
+    })
     let words;
 //Fill text
     const fillText = (n) => {
