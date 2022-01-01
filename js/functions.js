@@ -319,7 +319,7 @@ body.onload = () => {
             };
             if(newElement.speed > recordSpeed.speed) {
                 recordSpeed = newElement;
-            }else if(newElement.speed === recordSpeed.speed && newElement.speed > recordSpeed.speed){
+            }else if(newElement.speed === recordSpeed.speed && newElement.present > recordSpeed.present){
                 recordSpeed = newElement;
             }
             localStorage.setItem("recordTypeSpeed", JSON.stringify(recordSpeed))
