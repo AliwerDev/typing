@@ -172,7 +172,7 @@ body.onload = () => {
     const haveUser = () => {
         const userData = JSON.parse(localStorage.getItem("userData"));
         if(userData){
-            const recordS = JSON.parse(localStorage.getItem("recordTypeSpeed")) || 0;
+            const recordS = JSON.parse(localStorage.getItem("recordTypeSpeed")) || {speed: 0};
             user.innerHTML = userData.userName;
             isHaveUser = true;
             userInfo.innerHTML = "";
@@ -285,7 +285,6 @@ body.onload = () => {
 
 //Finish game
     const finishGame = (result, interVal) => {
-        haveUser();
         console.log(result)
         //User scorelarini chiqarish
 
@@ -334,6 +333,7 @@ body.onload = () => {
         }else {
             alertResult.classList.remove("d-none");
         }
+        haveUser();
     }
 
 //    More info
