@@ -116,7 +116,7 @@ body.onload = () => {
             //Word finish
 
             if(item.key === ' ') {
-                if (input.value === " ") {
+                if (input.value === " " || input.value === "") {
                     input.value = "";
                     return
                 }
